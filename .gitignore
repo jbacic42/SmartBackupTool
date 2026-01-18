@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Application Configuration & Logs
+.backup_config.json
+.backup_operations.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
