@@ -25,10 +25,10 @@ jobs:
       - name: Build with PyInstaller
         run: |
           # Build GUI - adding --noconfirm to prevent hanging
-          pyinstaller --onefile --windowed --noconfirm --name SmartBackupTool-Linux main.py 
+          pyinstaller --onefile --windowed --noconfirm --name SmartBackupTool main.py 
           
           # Build CLI - note we are NOT using 'clean' so it keeps the GUI file
-          pyinstaller --onefile --noconfirm --name SBcli-Linux SBcli.py 
+          pyinstaller --onefile --noconfirm --name SBcli SBcli.py 
 
       - name: Upload Linux Artifacts
         uses: actions/upload-artifact@v4
