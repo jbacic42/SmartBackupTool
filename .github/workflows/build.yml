@@ -2,7 +2,7 @@ name: Build Smart Backup Tool
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build-linux:
