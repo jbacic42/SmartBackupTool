@@ -9,7 +9,7 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
 ## Features
 
 * **Dual Backup Modes:** Choose between two mutually exclusive methods to protect your data:
-    * **Smart Sync:** Performs an intelligent replication of the source directory. It only copies new or modified files by comparing file sizes, modification timestamps, and optional MD5 hashes.
+    * **Smart Sync:** Replicates the source directory. It only copies new or modified files by comparing file sizes, modification timestamps, and optional MD5 hashes.
     * **Zip Archive:** Compresses the source directory into a standalone ZIP file.
 * **Advanced Archiving Options:**
     * **Versioning:** Automatically detects existing backups in the destination and increments version tags (e.g., `v1.0` to `v1.1`).
@@ -19,9 +19,9 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
     * **Windows:** Utilizes Task Scheduler (`schtasks`).
     * **Linux:** Utilizes `crontab`.
     * Supports Hourly, Daily, Weekly, and Monthly frequencies.
-* **Full CLI Support:** A robust Command Line Interface (`SBcli.py`) is included for headless execution, scripting, and server-side automation.
+* **Full CLI Support:** Command Line Interface (`SBcli.py`) is included for headless execution, scripting, and scheduling backups.
 * **Persistent Configuration:** User preferences, including directory paths, themes, and the last active tab, are saved to `.backup_config.json`.
-* **Logging:** Comprehensive operation logs are maintained in `backup_operations.log` within the destination folder for audit and troubleshooting.
+* **Logging:** Operation logs are maintained in `.backup_operations.log` within the destination folder for audit and troubleshooting.
 
 ---
 
@@ -43,7 +43,7 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
 
 1. **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/smart-backup.git](https://github.com/your-username/smart-backup.git)
+    git clone https://github.com/jbacic42/SmartBackupTool
     cd smart-backup
     ```
 
@@ -59,9 +59,9 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
-4. **Install dependencies:**
+4. **Install requirements:**
     ```bash
-    pip install pyzipper ttkthemes
+    pip install -r requirements.txt
     ```
 
 5. **Run the application:**
