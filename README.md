@@ -69,11 +69,38 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
     python main.py
     ```
 
-### Using the CLI
-The CLI can be used for manual backups or manual scheduling:
-```bash
-# Perform an encrypted zip backup
-python SBcli.py "/source/path" "/dest/path" -z -e "your_password"
+## Command Line Interface (CLI) Usage
 
-# Schedule a daily sync with integrity check
-python SBcli.py "/source/path" "/dest/path" -i -s day
+The SBcli utility allows you to run backups directly from your terminal or automate them using system schedulers.
+
+### 🛠 Syntax
+\```bash
+./SBcli-Linux <source_path> <destination_path> [FLAGS]
+\```
+*Note: Both Source and Destination paths are required for execution.*
+
+### Available Flags
+
+Runs in Sync mode by default (unless Zip flag is provided)
+| Flag | Long Form | Description |
+| :--- | :--- | :--- |
+| -z | --zip | Enables Zip Mode. Required for encryption and versioning. |
+| -i | --integrity| Enables MD5 verification (Sync Mode only). |
+| -d | --date | Appends a date tag (YYYY-MM-DD) to the filename (Zip Mode only). |
+| -v | --version | Adds a version tag (e.g., v1.0). Use 'auto' to auto-increment (Zip Mode only). |
+| -e | --encrypt | Encrypts the ZIP with the provided plaintext password. |
+| -s | --schedule | Registers a task: hour, day, week, or month. Use with 'clear' to clear all scheduled tasks. |
+| -c | --clear | Removes the scheduled task for specific path pair. |
+
+### Example Use Cases
+
+**1. Automated Versioning (Auto-Increment)**
+\```bash
+./SBcli-Linux ~/MyProject ~/Backups -z -v auto
+\```
+
+**2. Global Scheduler Cleanup**
+\```bash
+./SBcli-Linux -s clear
+\```
+
