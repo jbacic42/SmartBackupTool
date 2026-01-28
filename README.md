@@ -74,9 +74,9 @@ The application is built in Python using `tkinter` for the GUI and `ttkthemes` f
 The SBcli utility allows you to run backups directly from your terminal or automate them using system schedulers.
 
 ### 🛠 Syntax
-\```bash
-./SBcli-Linux <source_path> <destination_path> [FLAGS]
-\```
+   ```bash
+   ./SBcli-Linux <source_path> <destination_path> [FLAGS]
+   ```
 *Note: Both Source and Destination paths are required for execution.*
 
 ### Available Flags
@@ -95,12 +95,12 @@ Runs in Sync mode by default (unless Zip flag is provided)
 ### Example Use Cases
 
 **1. Automated Versioning (Auto-Increment)**
-\```bash
-./SBcli-Linux ~/MyProject ~/Backups -z -v auto
-\```
+   ```bash
+   ./SBcli-Linux ~/MyProject ~/Backups -z -v auto
+   ```
 
 **2. Global Scheduler Cleanup**
-\```bash
-./SBcli-Linux -s clear
-\```
+   ```bash
+   ./SBcli-Linux -s clear
+   ```
 
